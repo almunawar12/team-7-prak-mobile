@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pertemuan_v/models/user.dart';
@@ -13,7 +15,9 @@ class ProfileDetail extends StatefulWidget {
 class _ProfileDetailState extends State<ProfileDetail> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _nameController = TextEditingController();
-  
+  final TextEditingController _passwordController = TextEditingController();
+  bool isVisiblePassword = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,15 +78,53 @@ class _ProfileDetailState extends State<ProfileDetail> {
                   child: TextFormField(
                     controller: _nameController,
                     decoration: InputDecoration(
+                      isDense: true,
                       label: const Text("Nama"),
                       hintText: "ex : kelompok 7",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    validator: (value){
-                      if (value == "" || value == null){
+                    validator: (value) {
+                      if (value == "" || value == null) {
                         return "Nama Wajib diisi";
+                      }
+                      return null;
+                    },
+                  ),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                  ),
+                  child: TextFormField(
+                    controller: _passwordController,
+                    obscureText: !isVisiblePassword,
+                    decoration: InputDecoration(
+                      isDense: true,
+                      label: const Text("Password"),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            isVisiblePassword = !isVisiblePassword;
+                          });
+                        },
+                        icon: Icon(
+                          isVisiblePassword == false
+                              ? Icons.visibility
+                              : Icons.visibility_off_rounded,
+                        ),
+                      ),
+                    ),
+                    validator: (value) {
+                      if (value == "" || value == null) {
+                        return "Password Wajib diisi";
                       }
                       return null;
                     },
@@ -92,15 +134,31 @@ class _ProfileDetailState extends State<ProfileDetail> {
             ),
           ),
         ),
-        Container(
-          margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-          padding: const EdgeInsets.all(16),
-          width: double.infinity,
-          decoration: BoxDecoration(
-              color: Colors.blue, borderRadius: BorderRadius.circular(16)),
-          child: const Center(
-            child: Text(
-              "simpan",
+        GestureDetector(
+          onTap: () {
+            if (_formKey.currentState!.validate()) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Column(
+                    children: const [
+                      Text("Sukses"),
+                      Text("Anda telah berhasil mengubah data diri anda")
+                    ],
+                  ),
+                ),
+              );
+            }
+          },
+          child: Container(
+            margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+            padding: const EdgeInsets.all(16),
+            width: double.infinity,
+            decoration: BoxDecoration(
+                color: Colors.blue, borderRadius: BorderRadius.circular(16)),
+            child: const Center(
+              child: Text(
+                "simpan",
+              ),
             ),
           ),
         )
