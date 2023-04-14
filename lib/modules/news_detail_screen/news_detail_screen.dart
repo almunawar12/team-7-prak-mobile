@@ -36,10 +36,10 @@ class _NewsDetailScreenState extends State<NewsDetailScreen> {
                       fit: BoxFit.cover,
                     ),
                     Align(
-                      alignment: Alignment(-1, 0),
+                      alignment: const Alignment(-1, 0),
                       child: IconButton(
-                        padding: EdgeInsets.only(left: 10.0),
-                        icon: Icon(Icons.arrow_back),
+                        padding: const EdgeInsets.only(left: 10.0),
+                        icon: const Icon(Icons.arrow_back),
                         onPressed: () {
                           Navigator.pop(context);
                         },
@@ -50,7 +50,7 @@ class _NewsDetailScreenState extends State<NewsDetailScreen> {
                       child: Container(
                         width: MediaQuery.of(context).size.width,
                         height: 50,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           borderRadius:
                               BorderRadius.vertical(top: Radius.circular(40)),
                           color: Colors.white,
@@ -63,21 +63,21 @@ class _NewsDetailScreenState extends State<NewsDetailScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                           bottom: 10, left: 16, right: 16, top: 20),
                       child: Container(
                         width: MediaQuery.of(context).size.width,
                         child: Column(children: [
                           Text(
                             widget.news!.title,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
                             ),
                           ),
                           Text(
                             widget.news!.date,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.w400,
                               color: Color(0xFF9A9BB2),
@@ -90,9 +90,9 @@ class _NewsDetailScreenState extends State<NewsDetailScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         IconButton(
-                          padding: EdgeInsets.symmetric(horizontal: 5.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 5.0),
                           iconSize: 20,
-                          icon: Icon(Icons.favorite),
+                          icon: const Icon(Icons.favorite),
                           color: isLike ? Colors.red : Colors.black,
                           onPressed: () {
                             setState(() {
@@ -107,11 +107,11 @@ class _NewsDetailScreenState extends State<NewsDetailScreen> {
                       ],
                     ),
                     Padding(
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "Deskripsi Berita",
                             style: TextStyle(
                               fontSize: 20,
@@ -119,11 +119,11 @@ class _NewsDetailScreenState extends State<NewsDetailScreen> {
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(left: 20),
+                            margin: const EdgeInsets.only(left: 20),
                             child: Text(
                               widget.news!.desc,
                               textAlign: TextAlign.justify,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w400,
                                 color: Color(0xFF9A9BB2),
@@ -134,20 +134,20 @@ class _NewsDetailScreenState extends State<NewsDetailScreen> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       child: Row(
                         children: [
-                          Text(
+                          const Text(
                             "Ditulis Oleh",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
                             ),
                           ),
-                          Spacer(),
+                         const Spacer(),
                           Text(
                             widget.news!.author,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
                               color: Color(0xFF9A9BB2),
