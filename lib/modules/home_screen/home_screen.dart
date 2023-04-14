@@ -154,7 +154,8 @@ class _HomeScreenState extends State<HomeScreen> {
             child: GestureDetector(
               onTap: () {
                 GoRouter.of(context).goNamed(
-                  AppRoutes.profileDetail
+                  AppRoutes.profileDetail,
+                  extra: User.dummy(),
                 );
               },
               child: Container(

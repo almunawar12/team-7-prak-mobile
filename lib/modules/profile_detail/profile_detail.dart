@@ -19,6 +19,14 @@ class _ProfileDetailState extends State<ProfileDetail> {
   bool isVisiblePassword = false;
 
   @override
+  void initState() {
+    if(widget.user.name != ""){
+      _nameController.text = widget.user.name;
+    }
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(
