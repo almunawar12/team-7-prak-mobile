@@ -27,6 +27,13 @@ class _ProfileDetailState extends State<ProfileDetail> {
   }
 
   @override
+  void dispose() {
+    _nameController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(
