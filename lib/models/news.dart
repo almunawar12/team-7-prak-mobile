@@ -66,5 +66,23 @@ var newsList = [
   date: "13 Apr 2023", 
   desc: "sekretaris Jenderal (Sekjen) Partai Amanat Nasional (PAN) Eddy Soeparno mengatakan, pihaknya terbuka jika PDI Perjuangan (PDI-P) beri syarat capres dari internal mereka untuk masuk jadi bagian rencana Koalisi Besar. ",
   ),
+
+  News(id: 07, 
+  likeCount: 600, 
+  title: "Bartomeu Tolak Real Madrid Ikut Campur Kasus Suap Wasit Barcelona", 
+  author: "Bayu Baskoro", 
+  banner: "https://akcdn.detik.net.id/community/media/visual/2017/10/03/2148df2c-a444-4d65-b21a-69b9510809a5_169.jpg?w=700&q=90", 
+  date: "13 Apr 2023", 
+  desc: "Barcelona diduga menyuap eks wakil presiden Komite Wasit Spanyol, Jose Maria Enriquez Negreira. Los Coles membayar mantan wasit itu sebesar 8,4 juta euro dalam kurun 2001-2018. Kasus ini sudah dibawa ke pengadilan oleh Kantor Kejaksaan Barcelona. Beberapa orang yang dinyatakan bersalah adalah Negreira dan dua mantan presiden Barcelona, Sandro Rosell dan Josep Maria Bartomeu.",
+  ),
+
+  News(id: 08, 
+  likeCount: 900, 
+  title: "Duh, Harry Maguire Dianggap Gak Punya Wibawa Kapten!", 
+  author: "Bayu Baskoro", 
+  banner: "https://akcdn.detik.net.id/community/media/visual/2022/10/28/harry-maguire-1_169.jpeg?w=700&q=90", 
+  date: "15 Apr 2023", 
+  desc: "Harry Maguire menjadi pemain yang paling disorot pada laga ini. Gol bunuh dirinya di injury time membuyarkan kemenangan Manchester United.Maguire dimasukkan menggantikan Raphael Varane yang cedera. Pemain 29 tahun itu gagal mengemban tugasnya dengan baik, termasuk gagal memenangkan duel udara dan cuma sekali tekel dan intersep.",
+  ),
   
 ];

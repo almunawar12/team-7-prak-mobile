@@ -29,12 +29,12 @@ class User {
   factory User.dummy() {
     return User(
       id: 001,
-      name: "Diar Nur Rizky",
-      username: "diarn",
-      email: "diarn@email.com",
+      name: "Kelompok 7",
+      username: "team7",
+      email: "team7@gmail.com",
       profilePhoto:
-          "https://cdn.idntimes.com/content-images/community/2020/09/104967619-2451390651819718-4934284928595035666-n-2fc82b7325949c7d003c1c58e17d48b7.jpg",
-      phoneNumber: "085123456789",
+          "https://ilovelife.co.id/blog/wp-content/uploads/elementor/thumbs/Han-Ji-pyeong-2-p2d5zrcc8cv7yq7tddk2kwf1g9prdp8xer5s3ayxz4.jpg",
+      phoneNumber: "0857977573412",
     );
   }
 }
